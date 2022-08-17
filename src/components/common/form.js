@@ -3,12 +3,12 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from './button';
 
-export default function BasicTextFields() {
+export default function BasicTextFields({title}) {
     return (
         <div>
             <div className="heading-container">
                 <h3>
-                    Login Form
+                {title}
                 </h3>
             </div>
 
@@ -23,7 +23,7 @@ export default function BasicTextFields() {
                 <TextField id="email" label="Enter the Email" variant="outlined" />
                 <TextField id="password" label="Enter the Password" variant="outlined" />
             </Box>
-            <Button />
+            <Button title={title}/>
         </div>
     );
 }
